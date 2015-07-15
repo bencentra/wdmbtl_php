@@ -3,7 +3,7 @@
 require_once("./markov.php");
 
 // Default options
-$filename = "./wdmbtl_text.txt";
+$filename = "../wdmbtl_text.txt";
 $order = 4;
 $rand_min = 100;
 $rand_max = 300;

@@ -1,13 +1,15 @@
 <?php
 
+require_once('../../wdmbtl_info.php');
+
 function megabytes($mb) {
 	return $mb * 1000000;
 }
 
-$filename = "./wdmbtl_text.txt";
+$filename = "../wdmbtl_text.txt";
 
 // Get latest data from kimono
-$request = "https://www.kimonolabs.com/api/8muy71q2?apikey=0skdw5OnhItylr0NF735zSFoWJ12F9is";
+$request = "https://www.kimonolabs.com/api/8muy71q2?apikey=".API_KEY;
 $response = file_get_contents($request);
 $results = json_decode($response, TRUE);
 $reviews = $results["results"]["collection1"];
